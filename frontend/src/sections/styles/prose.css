@@ -1,0 +1,226 @@
+/* Long-form text: an article's body, from Markdown (wrap the rendered HTML in <div class="prose">) or from Portable
+   Text (parts/rich-text, whose root is .prose). One stylesheet for both, so a Markdown post and a CMS post look the
+   same. Plain elements only: headings h2–h4, paragraphs, lists, quotes, links, inline code, code blocks (with a file
+   name: figure.code-block), images and figures with captions, tables, rules. Everything comes from the tokens, so the
+   prose follows the preset and its dark mode. Body text is --text-size-base, h2 --text-size-xl, h3 --text-size-lg. */
+@layer components {
+  .prose {
+    max-width: 65ch;
+    font-size: var(--text-size-base);
+    line-height: var(--text-line-height-body);
+    color: var(--foreground);
+    /* Code colours (parts/rich-text/code.ts, Shiki's CSS-variables theme): token colours only, each one checked
+       against --card. */
+    --code-foreground: var(--foreground);
+    --code-background: var(--card);
+    --code-token-constant: var(--primary-soft-foreground);
+    --code-token-string: var(--destructive);
+    --code-token-string-expression: var(--destructive);
+    --code-token-comment: var(--muted-foreground);
+    --code-token-keyword: var(--primary-soft-foreground);
+    --code-token-parameter: var(--foreground);
+    --code-token-function: var(--foreground);
+    --code-token-punctuation: var(--muted-foreground);
+    --code-token-link: var(--primary-soft-foreground);
+  }
+  .prose > * + * {
+    margin-top: 1.25em;
+  }
+  .prose :where(h2, h3, h4) {
+    font-family: var(--font-heading);
+    font-weight: var(--text-weight-heading);
+    letter-spacing: var(--text-letter-spacing-heading);
+    line-height: var(--text-line-height-heading);
+    color: var(--foreground);
+    scroll-margin-top: 6rem;
+  }
+  .prose h2 {
+    font-size: var(--text-size-xl);
+    margin-top: 2em;
+  }
+  .prose h3 {
+    font-size: var(--text-size-lg);
+    margin-top: 1.75em;
+  }
+  .prose h4 {
+    font-size: var(--text-size-base);
+    font-weight: 600;
+    margin-top: 1.5em;
+  }
+  .prose :where(h2, h3, h4) + * {
+    margin-top: 0.75em;
+  }
+  .prose a {
+    color: var(--primary-soft-foreground);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    /* An inline link is exempt from 2.5.8, but its box still reaches 24px: block padding on an inline element grows
+       the target without moving the line. */
+    padding-block: 0.125rem;
+  }
+  .prose a:hover {
+    text-decoration-thickness: 2px;
+  }
+  .prose strong {
+    font-weight: 600;
+  }
+  .prose :where(ul, ol) {
+    padding-left: 1.5em;
+  }
+  .prose ul {
+    list-style: disc;
+  }
+  .prose ol {
+    list-style: decimal;
+  }
+  .prose li + li {
+    margin-top: 0.5em;
+  }
+  .prose li::marker {
+    color: var(--muted-foreground);
+  }
+  .prose blockquote {
+    border-left: 3px solid var(--primary);
+    padding-left: 1.25em;
+    font-family: var(--font-heading);
+    font-size: var(--text-size-lg);
+    line-height: var(--text-line-height-heading);
+  }
+  .prose hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 2.5em 0;
+  }
+  .prose :not(pre) > code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.1em 0.35em;
+    /* A long identifier (ctx.log.info|warn|error) breaks rather than widening the page at 320px (1.4.10). */
+    overflow-wrap: anywhere;
+  }
+  .prose pre {
+    font-family: var(--font-mono);
+    font-size: var(--text-size-sm);
+    line-height: 1.6;
+    background: var(--code-background) !important;
+    color: var(--code-foreground);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    /* Spacing on the 4px step (rem, not em: an em of the small code size lands between steps). */
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+  }
+  /* A scrollable code block or table can take keyboard focus: show it. */
+  .prose :is(pre, table):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  /* A code block with a file name: the name sits on a tab above the code (parts/rich-text/code.ts). */
+  .prose .code-title {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-size-sm);
+    line-height: 1.6;
+    color: var(--muted-foreground);
+    background: var(--code-background);
+    border: 1px solid var(--border);
+    border-bottom: 0;
+    border-radius: var(--radius-card) var(--radius-card) 0 0;
+    padding: 0.5rem 1.25rem;
+  }
+  .prose .code-title + pre {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  /* Every code block is a figure with a copy button in its top corner (parts/copy): in the title bar when it has one,
+     else over the code, whose first line keeps clear of it. */
+  .prose .code-block {
+    position: relative;
+  }
+  .prose .code-block > pre:first-child {
+    padding-right: 3rem;
+  }
+  .prose .code-copy {
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+    background: var(--code-background);
+  }
+  /* Callouts: a quote that starts with a bold Note, Tip or Warning (parts/rich-text › CALLOUTS, rehype.ts). A box in
+     body type, its kind in the left rule's colour and the bold word. */
+  .prose blockquote[data-callout] {
+    font-family: var(--font-sans);
+    font-size: var(--text-size-base);
+    line-height: var(--text-line-height-body);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong);
+    border-radius: var(--radius-card);
+    padding: 1rem 1.25rem;
+  }
+  .prose blockquote[data-callout] > * + * {
+    margin-top: 0.75em;
+  }
+  .prose blockquote[data-callout='tip'] {
+    border-left-color: var(--primary);
+  }
+  .prose blockquote[data-callout='warning'] {
+    border-left-color: var(--destructive);
+  }
+  .prose blockquote[data-callout] strong:first-child {
+    margin-right: 0.35em;
+  }
+  /* An API endpoint line: a paragraph of only `POST /v1/runs` (parts/rich-text › endpointMethod). */
+  .prose p[data-endpoint] > code {
+    display: block;
+    font-size: var(--text-size-sm);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-card);
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .prose :where(img, video) {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-card);
+  }
+  .prose figure img {
+    border: 1px solid var(--border);
+  }
+  .prose figcaption {
+    margin-top: 0.75em;
+    font-size: var(--text-size-sm);
+    color: var(--muted-foreground);
+  }
+  /* A table wider than the column scrolls sideways instead of squeezing its columns. */
+  .prose table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: var(--text-size-sm);
+    font-variant-numeric: tabular-nums;
+  }
+  .prose :where(th, td) {
+    text-align: left;
+    padding: 0.5rem 1rem 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  /* In a table, which scrolls sideways, an identifier stays whole. */
+  .prose :is(th, td) code {
+    overflow-wrap: normal;
+    white-space: nowrap;
+    /* The table is already set small: its code keeps that size rather than shrinking below 12px. */
+    font-size: 1em;
+  }
+  .prose th {
+    font-weight: 600;
+    border-bottom-color: var(--border-strong);
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "recto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Recto: a free blog template for Next.js and Sanity, by themes.dev. Editorial type, a dark mode, visual editing and demo content.",
+  "keywords": [
+    "Sanity",
+    "Next.js",
+    "blog",
+    "template",
+    "Tailwind CSS",
+    "visual editing"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@10.23.0",
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter recto-frontend --filter recto-studio dev",
+    "dev:next": "pnpm --filter recto-frontend dev",
+    "dev:studio": "pnpm --filter recto-studio dev",
+    "build": "pnpm --filter recto-frontend build",
+    "seed": "pnpm --filter recto-frontend seed",
+    "draw-demo": "pnpm --filter recto-frontend draw-demo",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm --filter recto-frontend lint",
+    "test": "pnpm --filter recto-frontend test",
+    "validate": "pnpm dlx @sanity/template-validator@3.1.1",
+    "studio:deploy": "pnpm --filter recto-studio deploy",
+    "deploy:cf": "pnpm --filter recto-frontend deploy:cf"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd",
+      "@tailwindcss/oxide",
+      "unrs-resolver"
+    ],
+    "overrides": {
+      "@pierre/diffs": "1.5.2"
+    }
+  }
+}

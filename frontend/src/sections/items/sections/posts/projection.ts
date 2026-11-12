@@ -1,0 +1,3 @@
+// From the generated sanity.ts of this section (the GROQ projection only, so the site needs no `sanity` package).
+/** GROQ projection: a stored postsSection block → PostsContent (types.ts), ready to spread into <Posts />. */
+export const postsSectionProjection = `{ _type, _key, variant, tone, spacing, rules, eyebrow, heading, lead, link{ label, href }, basePath, posts[]->{ title, "slug": slug.current, date, excerpt, "image": image{ "src": asset->url, "alt": coalesce(alt, ""), "width": asset->metadata.dimensions.width, "height": asset->metadata.dimensions.height }, author{ name, "avatar": avatar{ "src": asset->url, "alt": coalesce(alt, ""), "width": asset->metadata.dimensions.width, "height": asset->metadata.dimensions.height } }, tags } }`;

@@ -1,0 +1,68 @@
+[
+ {
+  "ref": "seed-image:/images/people/person-1.svg",
+  "path": "/images/people/person-1.svg",
+  "width": 96,
+  "height": 96
+ },
+ {
+  "ref": "seed-image:/images/people/person-2.svg",
+  "path": "/images/people/person-2.svg",
+  "width": 96,
+  "height": 96
+ },
+ {
+  "ref": "seed-image:/images/people/person-3.svg",
+  "path": "/images/people/person-3.svg",
+  "width": 96,
+  "height": 96
+ },
+ {
+  "ref": "seed-image:/images/posts/a-field-guide-to-naming-things.svg",
+  "path": "/images/posts/a-field-guide-to-naming-things.svg",
+  "width": 1600,
+  "height": 900
+ },
+ {
+  "ref": "seed-image:/images/posts/fixing-the-same-chair-three-times.svg",
+  "path": "/images/posts/fixing-the-same-chair-three-times.svg",
+  "width": 1600,
+  "height": 900
+ },
+ {
+  "ref": "seed-image:/images/posts/sharpening-a-ten-minute-habit.svg",
+  "path": "/images/posts/sharpening-a-ten-minute-habit.svg",
+  "width": 1600,
+  "height": 900
+ },
+ {
+  "ref": "seed-image:/images/posts/the-case-for-a-slower-inbox.svg",
+  "path": "/images/posts/the-case-for-a-slower-inbox.svg",
+  "width": 1600,
+  "height": 900
+ },
+ {
+  "ref": "seed-image:/images/posts/the-studio-in-winter-light.svg",
+  "path": "/images/posts/the-studio-in-winter-light.svg",
+  "width": 1600,
+  "height": 900
+ },
+ {
+  "ref": "seed-image:/images/posts/what-a-paper-notebook-knows.svg",
+  "path": "/images/posts/what-a-paper-notebook-knows.svg",
+  "width": 1600,
+  "height": 900
+ },
+ {
+  "ref": "seed-image:/images/posts/why-we-stopped-keeping-a-roadmap.svg",
+  "path": "/images/posts/why-we-stopped-keeping-a-roadmap.svg",
+  "width": 1600,
+  "height": 900
+ },
+ {
+  "ref": "seed-image:/images/posts/writing-a-changelog-people-read.svg",
+  "path": "/images/posts/writing-a-changelog-people-read.svg",
+  "width": 1600,
+  "height": 900
+ }
+]

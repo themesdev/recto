@@ -1,0 +1,21 @@
+// Cloudflare Workers through OpenNext: `pnpm deploy:cf` (README › Deploy › Cloudflare).
+// Before the first deploy: create the cache bucket (npx wrangler r2 bucket create recto-site-opennext-cache) and set
+// the secrets (npx wrangler secret put SANITY_API_READ_TOKEN, FORWARD_URL, SANITY_REVALIDATE_SECRET).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "recto-site",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  // Rebuilt pages (every minute at most, and on publish) are kept in R2.
+  "r2_buckets": [{ "binding": "NEXT_INC_CACHE_R2_BUCKET", "bucket_name": "recto-site-opennext-cache" }],
+  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "recto-site" }],
+  // Public settings, read at build time too. Secrets (tokens, FORWARD_URL) go in with `wrangler secret put`.
+  "vars": {
+    "NEXT_PUBLIC_SANITY_PROJECT_ID": "",
+    "NEXT_PUBLIC_SANITY_DATASET": "production",
+    "SITE_URL": "https://www.example.com",
+    "SANITY_STUDIO_URL": "https://example.sanity.studio"
+  }
+}

@@ -1,0 +1,33 @@
+/* This theme's additions to the prose. The prose itself (blog posts and the legal pages: headings, lists, quotes,
+   code, figures, tables, the rhythm) is the section library's, in src/sections/styles/prose.css, the same stylesheet
+   the Astro edition draws its Markdown posts with. The post body (the rich-text part) has .prose on its root. */
+@layer components {
+  /* Placeholder copy in the legal shells: marked so it can't go live unnoticed. */
+  .prose .placeholder {
+    background: var(--primary-soft);
+    color: var(--primary-soft-foreground);
+    border-radius: var(--radius-sm);
+    padding: 0 0.25em;
+  }
+}
+
+/* Recto: a post is set in Literata, the headings' face, at a reading size; the code stays in the mono. The article's
+   head (app/blog/[slug]/page.tsx) shares the column's width, --measure. */
+:root {
+  --measure: 42rem;
+}
+@layer components {
+  .prose {
+    max-width: var(--measure);
+    font-family: var(--font-heading);
+    font-optical-sizing: auto;
+    font-size: calc(var(--text-size-base) * 1.06);
+    line-height: 1.68;
+  }
+  .prose :where(h2, h3, h4) {
+    letter-spacing: var(--text-letter-spacing-heading);
+  }
+  .prose :where(pre, code, table, figcaption) {
+    font-size: 0.86em;
+  }
+}

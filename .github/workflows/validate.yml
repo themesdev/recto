@@ -1,0 +1,10 @@
+name: Validate template
+on: push
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate Sanity template
+        uses: sanity-io/template-validator@v3

@@ -1,0 +1,347 @@
+/* Base rules every section relies on. A theme imports this file after tokens.css (agent docs: README.md › Using). */
+
+/* ruled: the decorative hairlines (above rows, under heads, inside cards) draw only inside a section with the rules
+   prop (data-rules on its root). By default sections separate by space, ground and composition, not lines; tables and
+   data lists use plain border classes and keep theirs. */
+@custom-variant ruled (&:where([data-rules] *, [data-rules]));
+
+/* Interaction states (tokens: state.*). on-hover: and on-press: are hover and :active that skip a disabled or busy
+   control. The states page (parts/states) shows every state at once through data-force="hover" / "press": states.css
+   adds that to these variants, in the library's own site only, so a theme's stylesheet carries no forced copies. A control takes s-press for its tactile press, disabled and loading looks; a card that is one link takes
+   s-card. */
+@custom-variant on-hover {
+  @media (hover: hover) {
+    &:hover:not(:disabled, [aria-disabled='true'], [aria-busy='true']) {
+      @slot;
+    }
+  }
+}
+@custom-variant on-press {
+  &:active:not(:disabled, [aria-disabled='true'], [aria-busy='true']) {
+    @slot;
+  }
+}
+@custom-variant on-disabled (&:disabled, &[aria-disabled='true']);
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    /* 2.4.11: an anchor target or a focused control is not hidden under the sticky header. */
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: var(--text-size-base);
+    line-height: var(--text-line-height-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  :where(h1, h2, h3) {
+    font-family: var(--font-heading);
+    text-wrap: balance;
+  }
+  :where(p, li, dd, blockquote) {
+    text-wrap: pretty;
+  }
+  /* Section copy (leads, card and row text: a few lines each) is balanced, so no paragraph ends on a stub of a line
+     (the craft lint's short-last-line). Long reading text (.prose) keeps pretty. */
+  :where([data-section]) :where(p, dd, blockquote):not(:where(.prose *)) {
+    text-wrap: balance;
+  }
+  :focus-visible,
+  [data-force~='focus'] {
+    outline: var(--state-focus-width, 2px) solid var(--ring);
+    outline-offset: var(--state-focus-offset, 2px);
+  }
+  /* A section with its own tone draws its own ground and text colour from the toned tokens. */
+  [data-tone] {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0s !important;
+      animation-duration: 0s !important;
+    }
+  }
+}
+
+@layer components {
+  /* A code surface outside prose (hero › code, the docs parts): the code colours of parts/rich-text/code.ts (Shiki's
+     CSS-variables theme), the same token mapping prose.css gives an article's code blocks. */
+  .s-code {
+    --code-foreground: var(--foreground);
+    --code-background: var(--card);
+    --code-token-constant: var(--primary-soft-foreground);
+    --code-token-string: var(--destructive);
+    --code-token-string-expression: var(--destructive);
+    --code-token-comment: var(--muted-foreground);
+    --code-token-keyword: var(--primary-soft-foreground);
+    --code-token-parameter: var(--foreground);
+    --code-token-function: var(--foreground);
+    --code-token-punctuation: var(--muted-foreground);
+    --code-token-link: var(--primary-soft-foreground);
+  }
+  /* The docs shell (parts/docs): the sidebar and On this page stick below the site header and scroll on their own.
+     A theme with a sticky header sets --docs-offset to its height. */
+  .s-docs-aside {
+    position: sticky;
+    top: var(--docs-offset, 0px);
+    align-self: start;
+    max-height: calc(100vh - var(--docs-offset, 0px));
+    overflow-y: auto;
+  }
+  /* The tactile press: a pressed control moves down a pixel and shrinks a little (state.press.*), its fill darkens
+     through on-press: classes. With reduced motion only the fill changes. Disabled fades (state.disabled.opacity);
+     loading (aria-busy) keeps the control's size, hides its label and turns a ring where it was. */
+  .s-press {
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: var(--state-duration);
+    transition-timing-function: ease-out;
+  }
+  /* A state arrives at once and fades only on the way out: feedback is instant, leaving is soft. */
+  .s-press:where(:hover, :active, [data-force]),
+  .s-card:where(:hover, :has(a:active), [data-force]) {
+    transition-duration: 0s;
+  }
+  /* Pressed is more than a move: a tint of the text colour inside the control (state.press.tint), so it reads as
+     pressed with reduced motion too, and differs from hover on every control. */
+  .s-press:where(:active:not(:disabled, [aria-disabled='true'], [aria-busy='true']), [data-force~='press']) {
+    box-shadow: inset 0 0 0 100vmax color-mix(in oklch, var(--foreground) var(--state-press-tint), transparent);
+  }
+  /* The move, except on a link stretched over its card (before:inset-0): a transform would make the link the containing
+     block of its own ::before, so mid-click the overlay shrank to the title, the mouseup landed on the photo and the
+     click was lost. That link shows the press by its tint, and its s-card gives under it (parts/states/press.test.ts). */
+  .s-press:where(:active:not(:disabled, [aria-disabled='true'], [aria-busy='true']), [data-force~='press']):where(
+      :not([class*='before:inset-0'])
+    ) {
+    transform: translateY(var(--state-press-shift)) scale(var(--state-press-scale));
+  }
+  .s-press:where(:disabled, [aria-disabled='true'], [data-force~='disabled']) {
+    opacity: var(--state-disabled-opacity);
+    cursor: not-allowed;
+  }
+  .s-press:where([aria-busy='true'], [data-force~='loading']) {
+    position: relative;
+    cursor: progress;
+    -webkit-text-fill-color: transparent;
+  }
+  .s-press:where([aria-busy='true'], [data-force~='loading']) > * {
+    visibility: hidden;
+  }
+  .s-press:where([aria-busy='true'], [data-force~='loading'])::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 1.1em;
+    height: 1.1em;
+    border: 2px solid currentColor;
+    border-inline-end-color: transparent;
+    border-radius: 9999px;
+    animation: s-spin 0.8s linear infinite;
+  }
+  @keyframes s-spin {
+    to {
+      rotate: 1turn;
+    }
+  }
+  /* A card that is one link (the title's ::before covers it): it lifts its border on hover and gives under a press. */
+  .s-card {
+    transition-property: transform, border-color, background-color;
+    transition-duration: var(--state-duration);
+  }
+  .s-card:where(:has(a:active), [data-force~='press']) {
+    transform: translateY(var(--state-press-shift)) scale(calc(1 - (1 - var(--state-press-scale)) / 3));
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .s-press:where(:active, [data-force~='press']),
+    .s-card:where(:has(a:active), [data-force~='press']) {
+      transform: none;
+    }
+    .s-press:where([aria-busy='true'], [data-force~='loading'])::after {
+      animation: none;
+      border-inline-end-color: currentColor;
+      border-block-start-color: transparent;
+    }
+  }
+  /* ---------- Effects (parts/effects; tokens effect.*, all 0 = off in the defaults) ----------
+     Every effect is a layer or a transform: nothing moves the layout (CLS 0), and with reduced motion each one is
+     complete and still. Here only the ones sections use on their own (reveal, glow on cards, the footer's status
+     pulse, depth); texture, light field, typing, ticker, the layered panel and the section transitions are in
+     effects.css, which a theme imports only when it uses them, so a page never carries effects it cannot render. */
+
+  /* Reveal: an element starts faded and a little low, and settles when it scrolls into view (parts/effects/reveal.ts
+     sets data-revealed through one IntersectionObserver). Without JavaScript, or with reduced motion, it never hides:
+     the hidden start only applies once the script has marked the page (data-reveal-ready). */
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal-ready] .s-reveal {
+      transition:
+        opacity var(--effect-reveal-duration) ease-out,
+        translate var(--effect-reveal-duration) cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    [data-reveal-ready] .s-reveal:not([data-revealed]) {
+      opacity: calc(1 - var(--effect-reveal-fade));
+      translate: 0 var(--effect-reveal-distance);
+    }
+  }
+
+  /* Glow: a spotlight in the primary colour under the pointer on a card (parts/effects/glow.ts moves --glow-x/y; without
+     it the light sits at the top centre). A layer under the content, so it never covers text. */
+  .s-glow {
+    position: relative;
+    isolation: isolate;
+  }
+  .s-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: radial-gradient(var(--effect-glow-size) circle at var(--glow-x, 50%) var(--glow-y, 0%), color-mix(in oklch, var(--primary) var(--effect-glow-strength), transparent), transparent 70%);
+    opacity: 0;
+    transition: opacity var(--state-duration) ease-out;
+    pointer-events: none;
+  }
+  .s-glow:where(:hover, :focus-within, [data-force~='hover'])::before {
+    opacity: 1;
+  }
+
+  /* Status pulse: a dot with a ring that grows and fades (parts/effects › StatusPulse); reduced motion: the dot. */
+  .s-pulse {
+    position: relative;
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 9999px;
+    background: currentColor;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .s-pulse::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: currentColor;
+      animation: s-pulse var(--effect-pulse-duration) ease-out infinite;
+    }
+  }
+  .s-pulse[data-still]::after {
+    display: none;
+  }
+  @keyframes s-pulse {
+    to {
+      transform: scale(2.6);
+      opacity: 0;
+    }
+  }
+
+  /* Depth: a shadow scale for layered panels (effect.shadow.*); the panel with a second sheet behind it is in effects.css. */
+  .s-depth-1 {
+    box-shadow: var(--effect-shadow-raised);
+  }
+  .s-depth-2 {
+    box-shadow: var(--effect-shadow-overlay);
+  }
+
+  /* Ultra-wide (parts/image/responsive.ts): an image that bleeds to the window stops at size.bleed and, past it,
+     becomes a frame centred on the section's ground: its corners round and its edges fade into the ground, so a 5120px
+     screen shows a composed picture, not a stretched one. */
+  .s-bleed {
+    max-width: var(--size-bleed);
+  }
+  @media (min-width: 2560px) {
+    .s-bleed-frame {
+      border-radius: var(--radius-card);
+    }
+    .s-bleed-fade {
+      mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    }
+  }
+
+  /* A scroll region that is wider than its box (pricing › table) shows a soft shadow on the edge with more past it, and
+     none at an end it has reached: the shadows are fixed to the box, the covers in the card colour scroll with the
+     content and hide them at the ends. A cut column then reads as scrollable, not as broken. */
+  .s-scroll-cue {
+    --cue: color-mix(in oklch, var(--foreground) 22%, transparent);
+    background:
+      linear-gradient(to right, var(--card) 40%, transparent) left center / 3rem 100% no-repeat local,
+      linear-gradient(to left, var(--card) 40%, transparent) right center / 3rem 100% no-repeat local,
+      radial-gradient(farthest-side at 0 50%, var(--cue), transparent) left center / 1rem 100% no-repeat scroll,
+      radial-gradient(farthest-side at 100% 50%, var(--cue), transparent) right center / 1rem 100% no-repeat scroll,
+      var(--card);
+  }
+  /* A start-aligned display or section heading moves back by about half a first letter's side bearing (in Inter N, B
+     and T sit 0.04em in, A and W none), so its ink lines up with the text under it within 2px either way (the craft
+     lint's optical-alignment). A theme whose heading font has other bearings sets --heading-optical-offset (0: off). */
+  /* From 1280px only: below it the gutter is at its minimum (32px) and the half pixel the offset corrects is under
+     what the eye or the craft lint sees, while the sweep's edge-gutter would see the heading cross the gutter. */
+  @media (min-width: 80rem) {
+    .s-optical {
+      margin-inline-start: var(--heading-optical-offset, -0.02em);
+    }
+  }
+  .s-docs-summary::-webkit-details-marker {
+    display: none;
+  }
+  /* A logo from the CMS drawn in the text colour of its section (parts/logo-mark): the file is a mask, so one upload
+     works on light, muted and inverse sections and in both themes. Forced colours: the system text colour. */
+  .s-logo-mask {
+    display: block;
+    /* At most 10rem, and never wider than its cell: a narrow cell scales the mark down whole (logo-wall-overflow). */
+    max-width: min(10rem, 100%);
+    background-color: currentColor;
+    mask: var(--logo) center / contain no-repeat;
+  }
+  /* Logos › marquee: two copies of the list on one rail, moved by half its width per lap, so the loop has no seam.
+     Pauses on hover, on keyboard focus inside and with the pause button (data-paused); fades at both edges. With
+     reduced motion: a still rail; the list wraps and the copy and the button go (logosClasses, motion-reduce:). */
+  .s-marquee {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  }
+  .s-marquee-rail {
+    display: flex;
+    width: max-content;
+    animation: s-marquee var(--marquee-duration, 40s) linear infinite;
+  }
+  .s-marquee:hover .s-marquee-rail,
+  .s-marquee:focus-within .s-marquee-rail,
+  [data-paused] .s-marquee-rail {
+    animation-play-state: paused;
+  }
+  @keyframes s-marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .s-marquee {
+      mask-image: none;
+    }
+    .s-marquee-rail {
+      display: block;
+      width: auto;
+      animation: none;
+    }
+  }
+  @media (forced-colors: active) {
+    .s-logo-mask {
+      forced-color-adjust: none;
+      background-color: CanvasText;
+    }
+  }
+}
+
+/* Section spacing (the spacing prop, data-spacing on the root): the room above and below as a setting, so a page can
+   vary its rhythm without hand work. Outside a layer on purpose: it outranks the section's py-(--space-section). */
+[data-section][data-spacing='tight'] {
+  padding-block: calc(var(--space-section) * 0.6);
+}
+[data-section][data-spacing='roomy'] {
+  padding-block: calc(var(--space-section) * 1.6);
+}

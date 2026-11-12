@@ -1,0 +1,24 @@
+node_modules
+.env
+.env.*
+!.env.example
+.dev.vars
+.DS_Store
+*.tsbuildinfo
+
+# Next.js and OpenNext (frontend/)
+frontend/.next
+frontend/.open-next
+frontend/.wrangler
+frontend/out
+frontend/next-env.d.ts
+frontend/src/lib/og/assets.generated.ts
+frontend/AGENTS.md
+frontend/CLAUDE.md
+
+# Studio
+studio/dist
+studio/.sanity
+
+.wrangler
+frontend/open-next.*.config.ts

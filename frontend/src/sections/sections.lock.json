@@ -1,0 +1,18 @@
+{
+  "note": "Vendored copy of the themes.dev section library (React twins, generated Sanity schema and queries). Edit freely; your changes are yours.",
+  "library": "c58fdc8",
+  "sections": [
+    "announcement",
+    "content",
+    "cta",
+    "footer",
+    "header",
+    "hero",
+    "media",
+    "newsletter",
+    "page-header",
+    "posts",
+    "split",
+    "team"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "recto-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sanity Studio for Recto: posts, pages and the site settings.",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sanity/vision": "6.22.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sanity": "6.22.0",
+    "styled-components": "6.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "recto-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Recto, the website: a Next.js blog that reads its posts and pages from Sanity.",
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "packageManager": "pnpm@10.23.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "typecheck": "node tools/og-assets.mjs && next typegen && tsc --noEmit",
+    "lint": "eslint . && node tools/lint.mjs",
+    "test": "node --import ./tests/resolve-ts.mjs --test tests/*.test.ts",
+    "seed": "node --env-file-if-exists=.env.local --env-file-if-exists=.env scripts/seed.mjs",
+    "draw-demo": "node tools/draw-demo.mjs",
+    "preview:cf": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy:cf": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "predev": "node tools/og-assets.mjs",
+    "prebuild": "node tools/og-assets.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/instrument-sans": "5.3.0",
+    "@fontsource-variable/jetbrains-mono": "5.3.0",
+    "@fontsource-variable/literata": "5.3.0",
+    "@fontsource/instrument-sans": "5.3.0",
+    "@fontsource/literata": "5.3.0",
+    "@portabletext/react": "8.0.1",
+    "@sanity/client": "8.9.0",
+    "@sanity/preview-url-secret": "4.1.5",
+    "@sanity/visual-editing": "6.1.3",
+    "@sanity/webhook": "4.0.4",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "groq-js": "2.0.0",
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "0.0.1",
+    "shiki": "4.5.0",
+    "tailwind-merge": "3.7.0"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "1.20.12",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.2",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3",
+    "wrangler": "4.151.2"
+  }
+}

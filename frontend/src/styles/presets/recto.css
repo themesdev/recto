@@ -1,0 +1,227 @@
+/* Preset "Recto": a page set for reading. Literata for the headings and the post body, Instrument Sans for everything
+   around it, ink on warm white, one vermilion for links and actions, hairline rules and almost square corners. Light
+   with a dark mode.
+   modes: light dark
+   Fonts (SIL Open Font License 1.1, self-hosted with next/font: src/styles/fonts/recto.ts): Literata, Instrument Sans,
+   JetBrains Mono.
+   Everything a section draws comes from the custom properties below: colours (light, then dark, then the muted and
+   inverse tones), radii, fonts, the type scale, section spacing and the container width; the block under
+   @media (width < 40rem) holds the phone values. */
+
+:root {
+  --background: #FBFAF7;
+  --foreground: #18171A;
+  --muted-foreground: #5D5A56;
+  --card: #FFFFFF;
+  --border: #E5E2DB;
+  --border-strong: #8A857C;
+  --input: #8A857C;
+  --primary: #B0361B;
+  --primary-foreground: #FFFFFF;
+  --primary-soft: #F7E7E1;
+  --primary-soft-foreground: #8F2A13;
+  --destructive: #A3241B;
+  --ring: #B0361B;
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-card: 3px;
+  --radius-button: 3px;
+  --font-sans: var(--font-preset-sans), "Instrument Sans Variable", "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-preset-heading), "Literata Variable", Literata, ui-serif, Georgia, serif;
+  --font-mono: var(--font-preset-mono), "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --text-size-sm: 14px;
+  --text-size-base: 18px;
+  --text-size-lg: 22px;
+  --text-size-xl: 30px;
+  --text-size-2xl: 42px;
+  --text-size-display: 68px;
+  --text-line-height-body: 1.6;
+  --text-line-height-heading: 1.14;
+  --text-line-height-display: 1.03;
+  --text-weight-heading: 500;
+  --text-weight-display: 400;
+  --text-letter-spacing-heading: -0.012em;
+  --text-letter-spacing-display: -0.028em;
+  --space-section: 88px;
+  --space-gap: 28px;
+  --size-container: 1140px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --background: #131211;
+    --foreground: #EDEAE3;
+    --muted-foreground: #A7A299;
+    --card: #1B1A18;
+    --border: #2D2B28;
+    --border-strong: #6E6961;
+    --input: #74706A;
+    --primary: #F2876A;
+    --primary-foreground: #1C0D08;
+    --primary-soft: #3A1E16;
+    --primary-soft-foreground: #F6B19D;
+    --destructive: #FF8B7B;
+    --ring: #F2876A;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --background: #131211;
+  --foreground: #EDEAE3;
+  --muted-foreground: #A7A299;
+  --card: #1B1A18;
+  --border: #2D2B28;
+  --border-strong: #6E6961;
+  --input: #74706A;
+  --primary: #F2876A;
+  --primary-foreground: #1C0D08;
+  --primary-soft: #3A1E16;
+  --primary-soft-foreground: #F6B19D;
+  --destructive: #FF8B7B;
+  --ring: #F2876A;
+  color-scheme: dark;
+}
+
+@media (width < 40rem) {
+  :root {
+    --text-size-sm: 14px;
+    --text-size-base: 17px;
+    --text-size-lg: 20px;
+    --text-size-xl: 24px;
+    --text-size-2xl: 31px;
+    --text-size-display: 42px;
+    --space-section: 60px;
+    --space-gap: 20px;
+  }
+}
+
+[data-tone='muted'] {
+  --background: #F3F1EC;
+  --card: #FBFAF7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) [data-tone='muted'] {
+    --background: #1A1917;
+    --card: #211F1D;
+  }
+}
+
+:root[data-theme='dark'] [data-tone='muted'] {
+  --background: #1A1917;
+  --card: #211F1D;
+}
+
+[data-tone='inverse'] {
+  --background: #18171A;
+  --foreground: #F2EFE8;
+  --muted-foreground: #B3AEA5;
+  --card: #222024;
+  --border: #36333A;
+  --border-strong: #7C776F;
+  --input: #7C776F;
+  --primary: #F2876A;
+  --primary-foreground: #1C0D08;
+  --primary-soft: #3A1E16;
+  --primary-soft-foreground: #F6B19D;
+  --destructive: #FF9C8E;
+  --ring: #F2876A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) [data-tone='inverse'] {
+    --background: #1E1D1C;
+    --foreground: #F2EFE8;
+    --muted-foreground: #B3AEA5;
+    --card: #272523;
+    --border: #3A3734;
+    --border-strong: #7C776F;
+    --input: #7C776F;
+    --primary: #F2876A;
+    --primary-foreground: #1C0D08;
+    --primary-soft: #3A1E16;
+    --primary-soft-foreground: #F6B19D;
+    --destructive: #FF9C8E;
+    --ring: #F2876A;
+  }
+}
+
+:root[data-theme='dark'] [data-tone='inverse'] {
+  --background: #1E1D1C;
+  --foreground: #F2EFE8;
+  --muted-foreground: #B3AEA5;
+  --card: #272523;
+  --border: #3A3734;
+  --border-strong: #7C776F;
+  --input: #7C776F;
+  --primary: #F2876A;
+  --primary-foreground: #1C0D08;
+  --primary-soft: #3A1E16;
+  --primary-soft-foreground: #F6B19D;
+  --destructive: #FF9C8E;
+  --ring: #F2876A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-soft-foreground: var(--primary-soft-foreground);
+  --color-destructive: var(--destructive);
+  --color-ring: var(--ring);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-card: var(--radius-card);
+  --radius-button: var(--radius-button);
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --font-mono: var(--font-mono);
+  --text-size-sm: var(--text-size-sm);
+  --text-size-sm--line-height: var(--text-line-height-body);
+  --text-size-base: var(--text-size-base);
+  --text-size-base--line-height: var(--text-line-height-body);
+  --text-size-lg: var(--text-size-lg);
+  --text-size-lg--line-height: var(--text-line-height-body);
+  --text-size-xl: var(--text-size-xl);
+  --text-size-xl--line-height: var(--text-line-height-body);
+  --text-size-2xl: var(--text-size-2xl);
+  --text-size-2xl--line-height: var(--text-line-height-heading);
+  --text-size-2xl--font-weight: var(--text-weight-heading);
+  --text-size-2xl--letter-spacing: var(--text-letter-spacing-heading);
+  --text-size-display: var(--text-size-display);
+  --text-size-display--line-height: var(--text-line-height-display);
+  --text-size-display--font-weight: var(--text-weight-display);
+  --text-size-display--letter-spacing: var(--text-letter-spacing-display);
+}
+
+/* Recto: the touches tokens can't carry. Only token colours; nothing here changes a section's structure. */
+@layer components {
+  /* Literata's optical sizes: tighter and finer at display sizes, sturdier in the text. */
+  :where(h1, h2, h3, .font-heading) {
+    font-optical-sizing: auto;
+  }
+  /* Eyebrows: small capitals in the sans, in the accent, like a running head. */
+  .uppercase.tracking-wider {
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    color: var(--primary-soft-foreground);
+  }
+  [data-tone='inverse'] .uppercase.tracking-wider {
+    color: var(--muted-foreground);
+  }
+  /* A hairline between sections that share a ground: the page reads as one ruled sheet. */
+  main > section:not([data-tone]) + section:not([data-tone]) {
+    border-top: 1px solid var(--border);
+  }
+}

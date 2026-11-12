@@ -1,0 +1,2454 @@
+[
+ {
+  "_id": "siteSettings",
+  "_type": "siteSettings",
+  "announcement": {
+   "_type": "announcementSection",
+   "text": "New this week: Ines Varga on fixing the same chair three times.",
+   "link": {
+    "_type": "sectionLink",
+    "label": "Read it",
+    "href": "/blog/fixing-the-same-chair-three-times/"
+   },
+   "dismissible": true,
+   "tone": "muted"
+  },
+  "header": {
+   "_type": "headerSection",
+   "brand": {
+    "name": "Low Season",
+    "href": "/"
+   },
+   "links": [
+    {
+     "_type": "sectionLink",
+     "_key": "bcae80d710ea",
+     "label": "Essays",
+     "href": "/blog/"
+    },
+    {
+     "_type": "sectionLink",
+     "_key": "bf06e4fe2cf0",
+     "label": "About",
+     "href": "/about/"
+    },
+    {
+     "_type": "sectionLink",
+     "_key": "a72db41ab164",
+     "label": "RSS",
+     "href": "/rss.xml"
+    }
+   ],
+   "actions": [
+    {
+     "_type": "sectionAction",
+     "_key": "91a224c185e1",
+     "label": "Subscribe",
+     "href": "/#newsletter",
+     "emphasis": "primary"
+    }
+   ],
+   "variant": "inline"
+  },
+  "footer": {
+   "_type": "footerSection",
+   "brand": {
+    "name": "Low Season",
+    "href": "/",
+    "tagline": "A journal about making things slowly."
+   },
+   "columns": [
+    {
+     "_type": "column",
+     "_key": "bdf38cf137c4",
+     "title": "Read",
+     "links": [
+      {
+       "_type": "sectionLink",
+       "_key": "448c12bffb94",
+       "label": "Essays",
+       "href": "/blog/"
+      },
+      {
+       "_type": "sectionLink",
+       "_key": "eb66be97d110",
+       "label": "About",
+       "href": "/about/"
+      },
+      {
+       "_type": "sectionLink",
+       "_key": "782e4b090892",
+       "label": "RSS feed",
+       "href": "/rss.xml"
+      }
+     ]
+    },
+    {
+     "_type": "column",
+     "_key": "4604c5bb9989",
+     "title": "Topics",
+     "links": [
+      {
+       "_type": "sectionLink",
+       "_key": "83e41f32183e",
+       "label": "Craft",
+       "href": "/blog/"
+      },
+      {
+       "_type": "sectionLink",
+       "_key": "2f7eb07afbf0",
+       "label": "Tools",
+       "href": "/blog/"
+      },
+      {
+       "_type": "sectionLink",
+       "_key": "2e6130bbfc74",
+       "label": "Writing",
+       "href": "/blog/"
+      },
+      {
+       "_type": "sectionLink",
+       "_key": "8035f0003c63",
+       "label": "Work",
+       "href": "/blog/"
+      }
+     ]
+    }
+   ],
+   "social": [
+    {
+     "_type": "profile",
+     "_key": "b6d108b95d05",
+     "platform": "rss",
+     "url": "/rss.xml"
+    }
+   ],
+   "legal": "© 2026 Low Season. Demo content for the Recto template.",
+   "legalLinks": [
+    {
+     "_type": "sectionLink",
+     "_key": "b75fe9917db8",
+     "label": "Privacy",
+     "href": "/privacy/"
+    },
+    {
+     "_type": "sectionLink",
+     "_key": "48eea659f42c",
+     "label": "Template: Recto by themes.dev",
+     "href": "https://www.themes.dev/?utm_source=recto-demo&utm_medium=template&utm_campaign=recto"
+    }
+   ],
+   "variant": "wordmark"
+  },
+  "organisation": {
+   "legalName": "Low Season",
+   "email": "letters@lowseason.example"
+  }
+ },
+ {
+  "_id": "page.home",
+  "_type": "page",
+  "title": "Low Season: a journal about making things slowly",
+  "slug": {
+   "_type": "slug",
+   "current": "home"
+  },
+  "description": "Essays on craft, tools, writing and the working week, from a small workshop and two studios. New every other Wednesday.",
+  "sections": [
+   {
+    "_key": "c5ce3d6bd205",
+    "_type": "heroSection",
+    "heading": "Notes on making things slowly",
+    "note": "Issue 41 · Every other Wednesday",
+    "lead": "Essays on craft, tools and writing, and on doing good work without hurrying it. From a furniture workshop, a type studio and a small software team.",
+    "actions": [
+     {
+      "_type": "sectionAction",
+      "_key": "27791f439d56",
+      "label": "Read the latest",
+      "href": "/blog/fixing-the-same-chair-three-times/",
+      "emphasis": "primary"
+     },
+     {
+      "_type": "sectionAction",
+      "_key": "74bdb09daa18",
+      "label": "Subscribe",
+      "href": "#newsletter",
+      "emphasis": "secondary"
+     }
+    ],
+    "variant": "poster"
+   },
+   {
+    "_key": "41b667905b2a",
+    "_type": "postsSection",
+    "heading": "Latest",
+    "link": {
+     "_type": "sectionLink",
+     "label": "All essays",
+     "href": "/blog/"
+    },
+    "posts": [],
+    "variant": "featured",
+    "spacing": "tight"
+   },
+   {
+    "_key": "a2b07cf1eacb",
+    "_type": "postsSection",
+    "heading": "From the archive",
+    "lead": "Earlier essays, newest first.",
+    "link": {
+     "_type": "sectionLink",
+     "label": "Browse all essays",
+     "href": "/blog/"
+    },
+    "posts": [],
+    "variant": "list",
+    "tone": "muted"
+   },
+   {
+    "_key": "b38d4907d909",
+    "_type": "newsletterSection",
+    "eyebrow": "Letters",
+    "heading": "One essay, every other Wednesday",
+    "lead": "New writing from the journal by email, and nothing else. No tracking pixels, no sponsors. Unsubscribe with one click.",
+    "action": "/api/newsletter/",
+    "emailLabel": "Email address",
+    "buttonLabel": "Subscribe",
+    "note": "About 2,400 readers. We never share your address.",
+    "privacy": {
+     "_type": "sectionLink",
+     "label": "How we handle your address",
+     "href": "/privacy/"
+    },
+    "variant": "band",
+    "tone": "inverse",
+    "anchor": "newsletter"
+   }
+  ]
+ },
+ {
+  "_id": "page.blog",
+  "_type": "page",
+  "title": "Essays",
+  "slug": {
+   "_type": "slug",
+   "current": "blog"
+  },
+  "description": "Every essay in Low Season, newest first: craft, repair, tools, writing and the working week.",
+  "sections": [
+   {
+    "_key": "4c3a7cfb8a37",
+    "_type": "pageHeaderSection",
+    "eyebrow": "The archive",
+    "heading": "Essays",
+    "lead": "Everything we have published, newest first. Long enough to say something, short enough to finish with a coffee.",
+    "variant": "stacked"
+   },
+   {
+    "_key": "cb73b1dd31d3",
+    "_type": "newsletterSection",
+    "eyebrow": "Letters",
+    "heading": "One essay, every other Wednesday",
+    "lead": "New writing from the journal by email, and nothing else. No tracking pixels, no sponsors. Unsubscribe with one click.",
+    "action": "/api/newsletter/",
+    "emailLabel": "Email address",
+    "buttonLabel": "Subscribe",
+    "note": "About 2,400 readers. We never share your address.",
+    "privacy": {
+     "_type": "sectionLink",
+     "label": "How we handle your address",
+     "href": "/privacy/"
+    },
+    "variant": "inline",
+    "tone": "muted",
+    "anchor": "newsletter"
+   }
+  ]
+ },
+ {
+  "_id": "page.about",
+  "_type": "page",
+  "title": "About",
+  "slug": {
+   "_type": "slug",
+   "current": "about"
+  },
+  "description": "Low Season is written by a furniture maker, a type designer and a software engineer. Why we started it and how it works.",
+  "sections": [
+   {
+    "_key": "b8fb19252a10",
+    "_type": "pageHeaderSection",
+    "eyebrow": "About",
+    "heading": "Three people who make things, writing about how",
+    "lead": "Low Season started as a shared notebook between a workshop and two studios. It became a journal when friends kept asking to read it.",
+    "variant": "stacked",
+    "spacing": "roomy"
+   },
+   {
+    "_key": "9d1bcdd2f39d",
+    "_type": "contentSection",
+    "eyebrow": "Why it exists",
+    "heading": "Most advice about work is about doing more of it, faster",
+    "blocks": [
+     {
+      "_type": "textBlock",
+      "_key": "a2fadc0ec69f",
+      "heading": "What we write about",
+      "text": "Repair and maintenance, tools and routines, naming and writing, and how small teams decide what to do next. Each essay starts from something one of us actually did, and most of them end with what we would do differently."
+     },
+     {
+      "_type": "textBlock",
+      "_key": "6828cd1c5481",
+      "heading": "How it works",
+      "text": "One essay every other Wednesday, published here and sent to subscribers. No sponsors and no adverts. The journal is paid for by the three of us, and it costs very little, which is part of the point."
+     },
+     {
+      "_type": "textBlock",
+      "_key": "5716a0ac875a",
+      "heading": "Writing to us",
+      "text": "Replies to the newsletter reach all three of us. We read every one, answer most, and sometimes a letter becomes an essay. If we quote you, we ask first."
+     }
+    ],
+    "variant": "split"
+   },
+   {
+    "_key": "c50a98db66e8",
+    "_type": "teamSection",
+    "eyebrow": "Who writes it",
+    "heading": "The writers",
+    "people": [
+     {
+      "_type": "person",
+      "_key": "e570fee43d10",
+      "name": "Ines Varga",
+      "role": "Editor, furniture maker",
+      "avatar": {
+       "_type": "image",
+       "asset": {
+        "_type": "reference",
+        "_ref": "seed-image:/images/people/person-1.svg"
+       }
+      }
+     },
+     {
+      "_type": "person",
+      "_key": "20d99b1b266a",
+      "name": "Tomas Reyes",
+      "role": "Type designer",
+      "avatar": {
+       "_type": "image",
+       "asset": {
+        "_type": "reference",
+        "_ref": "seed-image:/images/people/person-2.svg"
+       }
+      }
+     },
+     {
+      "_type": "person",
+      "_key": "c199d06338fd",
+      "name": "Abi Okonjo",
+      "role": "Software engineer",
+      "avatar": {
+       "_type": "image",
+       "asset": {
+        "_type": "reference",
+        "_ref": "seed-image:/images/people/person-3.svg"
+       }
+      }
+     }
+    ],
+    "variant": "list",
+    "tone": "muted"
+   },
+   {
+    "_key": "8c7c5e6e6ba1",
+    "_type": "newsletterSection",
+    "eyebrow": "Letters",
+    "heading": "One essay, every other Wednesday",
+    "lead": "New writing from the journal by email, and nothing else. No tracking pixels, no sponsors. Unsubscribe with one click.",
+    "action": "/api/newsletter/",
+    "emailLabel": "Email address",
+    "buttonLabel": "Subscribe",
+    "note": "About 2,400 readers. We never share your address.",
+    "privacy": {
+     "_type": "sectionLink",
+     "label": "How we handle your address",
+     "href": "/privacy/"
+    },
+    "variant": "band",
+    "tone": "inverse",
+    "anchor": "newsletter"
+   }
+  ]
+ },
+ {
+  "_id": "post.fixing-the-same-chair-three-times",
+  "_type": "post",
+  "title": "Fixing the same chair three times",
+  "slug": {
+   "_type": "slug",
+   "current": "fixing-the-same-chair-three-times"
+  },
+  "date": "2026-10-28",
+  "excerpt": "A kitchen chair came back to the workshop three winters in a row. Each repair taught me something the first one should have.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/fixing-the-same-chair-three-times.svg"
+   }
+  },
+  "author": {
+   "name": "Ines Varga",
+   "role": "Editor",
+   "bio": "Ines builds chairs in a shared workshop and edits Low Season from the bench next to it. She writes about repair, tools and the habits that keep a practice going.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-1.svg"
+    }
+   }
+  },
+  "tags": [
+   "Craft",
+   "Repair"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "9b722f3b4f1c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "643aaa2f6785",
+      "text": "The chair arrived in a shopping bag. Not the whole chair, just the back legs and two stretchers, wrapped in a tea towel. The rest was still at home, the owner said, leaning against a wall because it could no longer be trusted with a person.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7ceff04ae718",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1ef4b64dfdac",
+      "text": "It was an ordinary kitchen chair, beech, probably eighty years old. Nothing about it was valuable except that a family had been sitting on it for three generations and wanted to keep doing so.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ef82efd4cb8f",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "215983fbc7c2",
+      "text": "The first repair",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "227b3af7b159",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ebc6b7408fbe",
+      "text": "The joint between the back leg and the side rail had worked loose. The old glue had crystallised and let go. I cleaned out the mortise, cut a thin shim to take up the slack, glued it with hide glue and clamped it overnight. It looked good and it felt solid. The owner took it home.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3630228a6ffc",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f19d39ba7d75",
+      "text": "A year later it was back. Same joint, same side.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e1af70ec9467",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a04fd21ae68a",
+      "text": "The second repair",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "751b832bef91",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "18db5a140043",
+      "text": "This time I looked at the chair instead of the joint. The rear legs splayed a few millimetres more than the front ones, so every time someone leaned back, the whole load went into that one rail. My shim had made the joint tight, but it had not changed where the force went.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5b4f08906175",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "53d040ac9f36",
+      "text": "I rebuilt the joint and added a corner block underneath the seat, screwed and glued, to carry some of the racking. Better. It lasted almost two winters.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3a2c624393fe",
+    "style": "blockquote",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "287992fb1fef",
+      "text": "A repair that only restores the original condition also restores the original failure.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1cf48c540d72",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b079eae24e5b",
+      "text": "The third repair",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4dac10d403f7",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7b0e464125cc",
+      "text": "The third time, I asked how the chair was used. It turned out to be the chair at the head of the table, the one the grandfather had always tipped back on, and now the grandson did too. No joint was going to survive that for long.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "aca9c2fffbd2",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bcf2e6715234",
+      "text": "So the third repair was partly a conversation. I made the joint as strong as the wood allowed, replaced the corner block with a slightly larger one, and suggested the chair move to a place at the side of the table. It has not been back since.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ff5b94dcb1d1",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0c693eb4163a",
+      "text": "What I do now",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d0cc6b59243e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "220a9fc84fc3",
+      "text": "When something comes in for a second repair, I stop treating it as a joint and start treating it as a question:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "89a3b97e31f4",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8b79687d2f8a",
+      "text": "What is the load, and where does it really go?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "cdf003255b3f",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "30962c32f161",
+      "text": "Has the object changed since it was made, or has the way it is used?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a21e20baa046",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c2c13a5fb1d8",
+      "text": "Is the part that broke the weakest part, or just the first one to give?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f4bdf2b3c91c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b1e0959300af",
+      "text": "Most things that fail twice are telling you about their life, not their construction. It is worth listening before reaching for the glue.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_id": "post.a-field-guide-to-naming-things",
+  "_type": "post",
+  "title": "A field guide to naming things",
+  "slug": {
+   "_type": "slug",
+   "current": "a-field-guide-to-naming-things"
+  },
+  "date": "2026-10-14",
+  "excerpt": "Names for a studio, a product or a typeface. The questions I ask before I write a single candidate down, and the tests a name has to pass.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/a-field-guide-to-naming-things.svg"
+   }
+  },
+  "author": {
+   "name": "Tomas Reyes",
+   "role": "Contributor",
+   "bio": "Tomas draws letters for a living and names things for a few clients who ask nicely. He keeps a studio on the third floor of a former printing house.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-2.svg"
+    }
+   }
+  },
+  "tags": [
+   "Writing",
+   "Studio"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "46bda6368cdb",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5cf0a872e5ea",
+      "text": "People ask me to name things because I draw letters, and they assume the two are related. They are, a little. A name is something you will see set in type thousands of times, and some names look better set than others. But most of the work happens before anything is drawn.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7bcb0bcaf945",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b30b9343da51",
+      "text": "Start with what it does, not what it is",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d8cf321fb008",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8776a515540e",
+      "text": "The first page of my notes is never a list of names. It is a list of verbs: what the thing does for the people who use it. A bakery feeds, warms, wakes up a street. A scheduling tool clears, fits, makes room. Verbs lead to images, and images lead to names far more often than adjectives do.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "909f7bfc4b78",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b67c0ad2bc90",
+      "text": "Write a lot of bad candidates",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "71f1062352b6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "4a60661b723f",
+      "text": "I write at least a hundred candidates, most of them terrible, in one sitting. Editing while writing kills the strange ones, and the strange ones are where the good names hide. The second sitting is for crossing out.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2a56c1c4b6a6",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b215ee3215bb",
+      "text": "The tests",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d7547faa43f9",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c3b4d492b726",
+      "text": "A name that survives the first cut goes through five tests. It has to pass all of them.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "86f3c69b44c0",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ebb9b9d9ea9e",
+      "text": "Say it on the phone.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "4bdfd6f89ad6",
+      "text": " Can someone who hears it once spell it? If you have to add “with a K”, it costs you every time.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2a16bd78fbe3",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5a2b7fbdf4a0",
+      "text": "Set it in type.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "a5cc5129005f",
+      "text": " Lowercase, capitals, small. Some letter combinations crowd or gape. A name with a lot of round letters looks friendly; one with a lot of verticals looks stern.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b311803db7d6",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ca51981118f9",
+      "text": "Put it in a sentence.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "7571c65e8cd1",
+      "text": " “I bought it at ___.” “We use ___ for that.” A name that only works as a logo fails here.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "306ca29427d9",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3303608717dc",
+      "text": "Search for it.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "6f7e9c6409c3",
+      "text": " Not for the domain, for the meaning. You want to know what else it already means to people.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2467041b824d",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c00ee3c9a3d7",
+      "text": "Wait a week.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "029804718a45",
+      "text": " Names that were exciting on Monday are often embarrassing by Friday. The ones that are still fine are usually the ones that last.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b0f2034a1540",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "70d21ae198b5",
+      "text": "What to avoid",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "28f76aa4d93e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "91f6ab0bb10c",
+      "text": "Descriptive names feel safe and age badly, because the thing they describe tends to change. Invented words feel distinctive and are hard to remember unless they are short. The names that hold up best are real words used slightly out of place: a word that belongs to another trade, another century, another room.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c907332abf8a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9753392b5b6f",
+      "text": "That is also, more or less, how this journal got its name.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_id": "post.the-case-for-a-slower-inbox",
+  "_type": "post",
+  "title": "The case for a slower inbox",
+  "slug": {
+   "_type": "slug",
+   "current": "the-case-for-a-slower-inbox"
+  },
+  "date": "2026-09-30",
+  "excerpt": "Our team moved from answering mail as it came in to three fixed windows a day. Response times went up a little. Everything else got better.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/the-case-for-a-slower-inbox.svg"
+   }
+  },
+  "author": {
+   "name": "Abi Okonjo",
+   "role": "Contributor",
+   "bio": "Abi writes software for a small team that makes scheduling tools for clinics. She is interested in how teams decide what to do next, and in leaving things out.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-3.svg"
+    }
+   }
+  },
+  "tags": [
+   "Work"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "69febdb84467",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2e30751d0707",
+      "text": "For a long time our support inbox worked like a smoke alarm. A message came in, someone heard it, and whoever was closest dropped what they were doing to answer. Our median first reply was eleven minutes, and we were proud of it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4f7f2b0ccf08",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "375dd109cbb4",
+      "text": "We were also tired, and our product was not getting much better.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ba45faf6b203",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "616bf4500049",
+      "text": "What we changed",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8d4529f2cb26",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0e96d8e793dd",
+      "text": "In the spring we tried an experiment. The inbox would be read three times a day, at nine, at one and at four. One person per window, on a rota. Outside those windows nobody looked, unless the status page showed an outage.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "db26d6307436",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5b5060cc8f52",
+      "text": "We told our customers in the footer of every reply: ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "91354412f9e6",
+      "text": "we read mail three times a day, so expect an answer within a few hours",
+      "marks": [
+       "em"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "d7c3623d4ac4",
+      "text": ". Nobody complained about the sentence itself. A few people thanked us for saying it.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e61f8c4f36ed",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2b90bf19b0b7",
+      "text": "What happened",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8cd7de2a1b40",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bca5014d3da0",
+      "text": "The median first reply went from eleven minutes to a little under two hours. That was the cost, and it was smaller than we feared.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "00cac28d0d54",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "59639bb86505",
+      "text": "The gains were harder to measure but easy to feel:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "42a590c667e7",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f60b464292f7",
+      "text": "Better answers.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "4bcbc0158d07",
+      "text": " Reading twelve messages at once shows you patterns. Three people asking about the same setting is a design problem, not three support tickets.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "23f436eaa761",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fdfa05840a17",
+      "text": "Fewer follow-ups.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "876ea2a0c1a3",
+      "text": " Replies written with time to think answered the next question too.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "282c954b3f24",
+    "style": "normal",
+    "listItem": "bullet",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "7f62365dfd7a",
+      "text": "Longer stretches of work.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "162d0df89758",
+      "text": " The people building the product got whole mornings back. Two features that had been “almost done” for months shipped in June.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "a7d3bb6e8625",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "420bd4341c8e",
+      "text": "What we kept fast",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f087448d3302",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "aa5081ad52c1",
+      "text": "Not everything can wait. Anything that mentions a failed payment, a locked account or a clinic that cannot see its schedule is flagged by a filter and goes to whoever is on call. That is about one message in twenty.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "99b7bafe4a97",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bf2f6ad9850c",
+      "text": "Would I recommend it?",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "21496392fca8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5f524b2c339b",
+      "text": "For a small team, yes. Speed of reply is one thing customers value, but it is rarely the main thing. They mostly want to be answered properly, once. A slower inbox gave us room to do that.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_id": "post.what-a-paper-notebook-knows",
+  "_type": "post",
+  "title": "What a paper notebook knows",
+  "slug": {
+   "_type": "slug",
+   "current": "what-a-paper-notebook-knows"
+  },
+  "date": "2026-09-16",
+  "excerpt": "I have tried every app for notes. I keep going back to a notebook with numbered pages, and I think I finally understand why.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/what-a-paper-notebook-knows.svg"
+   }
+  },
+  "author": {
+   "name": "Ines Varga",
+   "role": "Editor",
+   "bio": "Ines builds chairs in a shared workshop and edits Low Season from the bench next to it. She writes about repair, tools and the habits that keep a practice going.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-1.svg"
+    }
+   }
+  },
+  "tags": [
+   "Tools"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "c012215dd09a",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "039b0d05004e",
+      "text": "There is a shelf in the workshop with eleven notebooks on it, one for every year since I started. They are the same size, the same brand, with numbered pages and a ribbon. I have tried to replace them with apps more times than I can count. The apps were better at almost everything, and I stopped using every one of them within a month.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2f2e46c3581c",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0519c441e028",
+      "text": "It has an order nobody chose",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "701c6e0032e6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "007b2aceab6c",
+      "text": "A notebook fills up in the order things happened. A measurement for a cabinet sits next to a shopping list, next to a sketch of a joint I saw in a museum. In an app those would go into three different folders, and I would never see them together again.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6873cc07800e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dcd29d5d6c55",
+      "text": "That accidental order is useful. When I look for the cabinet measurements, I also find what else I was thinking about that week, and that is often the part I needed.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7f0b9954063a",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d5cf84bbdcdd",
+      "text": "It runs out",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5f914d07d5bd",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "592db50f0b9d",
+      "text": "A notebook has a last page. When I reach it, I read the whole thing back before starting the next one. It takes an evening. I copy a few things forward, and I let the rest go.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "91fac7905255",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fd0e6a37e36b",
+      "text": "No app ever asked me to do that, and so in the apps nothing was ever let go. Everything stayed, searchable and slightly in the way.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9a42ed539f23",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b4004b21b4c3",
+      "text": "It is slow in the right places",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d39a12102904",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8384724cc1ac",
+      "text": "Writing by hand is slower than typing, and that slowness acts as a filter. I only write down what seems worth the effort. Drawing is the opposite: on paper it is faster than any tool, so I draw much more.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c3467c42146b",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0cefc17aa0b2",
+      "text": "What I use the computer for",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "20f0e6b34e4f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fc6347f76d9a",
+      "text": "I am not against software. Drawings that need to be exact go into a CAD program. Anything I need to share goes into a shared document. Invoices go where invoices go.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "52beee7d0353",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "9e3c2b77ce75",
+      "text": "But the place where I think is the notebook. It does not sync, it cannot be searched, and it has never once interrupted me.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_id": "post.writing-a-changelog-people-read",
+  "_type": "post",
+  "title": "Writing a changelog people read",
+  "slug": {
+   "_type": "slug",
+   "current": "writing-a-changelog-people-read"
+  },
+  "date": "2026-09-02",
+  "excerpt": "Most changelogs are written for the people who made the change. A few rules that turned ours into something customers open on purpose.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/writing-a-changelog-people-read.svg"
+   }
+  },
+  "author": {
+   "name": "Abi Okonjo",
+   "role": "Contributor",
+   "bio": "Abi writes software for a small team that makes scheduling tools for clinics. She is interested in how teams decide what to do next, and in leaving things out.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-3.svg"
+    }
+   }
+  },
+  "tags": [
+   "Writing",
+   "Work"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "74aa90124316",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e856951bb46e",
+      "text": "Our changelog used to be generated from commit messages. It was complete, accurate and read by nobody, including us. Last year we started writing it by hand, once a fortnight. Now it is the most visited page on our site after the login.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b97d6978c528",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b8fba36eea42",
+      "text": "Here is what we changed.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "18a2fbd71bf9",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "fb7b0f5c59e7",
+      "text": "Write for the person at the front desk",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "50f2ceb493c0",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "0cdf13541a5e",
+      "text": "Our customers are receptionists and practice managers, not developers. So every entry answers one question: what is different for you now? “Refactored the availability engine” became “Booking a double appointment no longer hides the next free slot.”",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ce9160342dc1",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "07b353034696",
+      "text": "If a change has no visible effect, it does not go in. We keep a separate, technical log for that.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "96474fabffa9",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ad35521fc20a",
+      "text": "Lead with the best thing",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e053f15148cc",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "14e8190bed0c",
+      "text": "Each release gets one headline: the change most people will notice. Everything else goes below it, grouped as ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "da2ed5a93ddc",
+      "text": "New",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "bcb12d11298a",
+      "text": ", ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "72bc75133adf",
+      "text": "Improved",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "e82e9efead38",
+      "text": " and ",
+      "marks": []
+     },
+     {
+      "_type": "span",
+      "_key": "3d1f99db0dd5",
+      "text": "Fixed",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "ba876b18579a",
+      "text": ". Nobody reads a list of twenty items with equal weight, but almost everyone reads a headline.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "6da7f8cd28eb",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dd3e3e94ad89",
+      "text": "Show, then explain",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "e748766f2f5c",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3b2670fad6c6",
+      "text": "One screenshot does more than a paragraph. When a screenshot will not do, a short example will. For the few customers who use our export, we show the actual output:",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "sectionCode",
+    "_key": "e1c38e29ecfb",
+    "language": "csv",
+    "filename": "appointments-2026-09.csv",
+    "code": "date,time,practitioner,patient_ref,duration_min\n2026-09-01,09:00,Dr. Amsel,P-1042,20\n2026-09-01,09:20,Dr. Amsel,P-0877,40"
+   },
+   {
+    "_type": "block",
+    "_key": "2356080c5e19",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b928b9281a60",
+      "text": "Keep the dates honest",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "88135877c6ee",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ab6f383699bb",
+      "text": "Every entry has the date it shipped, not the date it was planned. If something was rolled out gradually, we say so: “Rolling out this week to all practices.”",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d16f7dfc9957",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "db390525f1d9",
+      "text": "Say what went wrong",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0ba9bd1e7971",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "68c85c0c0749",
+      "text": "When a release breaks something, the fix goes in the changelog with a plain sentence about what happened. Customers trust a changelog that admits mistakes far more than one that only reports progress.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0985ee63295d",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d8336e8b9b24",
+      "text": "Writing it takes one of us about an hour every two weeks. It is the best hour of support work we do.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_id": "post.the-studio-in-winter-light",
+  "_type": "post",
+  "title": "The studio in winter light",
+  "slug": {
+   "_type": "slug",
+   "current": "the-studio-in-winter-light"
+  },
+  "date": "2026-08-19",
+  "excerpt": "From November to February the light in my studio lasts about six hours. I used to fight that. Now the whole year is arranged around it.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/the-studio-in-winter-light.svg"
+   }
+  },
+  "author": {
+   "name": "Tomas Reyes",
+   "role": "Contributor",
+   "bio": "Tomas draws letters for a living and names things for a few clients who ask nicely. He keeps a studio on the third floor of a former printing house.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-2.svg"
+    }
+   }
+  },
+  "tags": [
+   "Studio"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "61a015f2ceff",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d3c5c646c59b",
+      "text": "My studio faces north-east, on the third floor of a building that used to print timetables. In summer the light comes in at six and stays until late. In winter it arrives around nine, low and grey, and by three it is gone.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "062cd22be6a3",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "997e56659a65",
+      "text": "For years I worked the same hours all year and complained about it from November on. Then a colleague who paints asked me why I was drawing letters under a lamp when there was daylight I was spending on email.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "9bff5894a1ba",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "271c58739c26",
+      "text": "Two kinds of work",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "51f20af70655",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "37cc15fabe75",
+      "text": "Since then I sort the work into two piles. Anything that needs judgement about shape goes into the daylight: drawing, spacing, comparing proofs. Anything that does not goes into the dark: invoices, mail, file preparation, the long tedious work of kerning tables.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8a1dd1f40e20",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "6258545024b2",
+      "text": "It sounds obvious. It took me nine years.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1fa312e89fd4",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "dd1c637c8dae",
+      "text": "The proof wall",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "62dfd0823986",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a685272159d0",
+      "text": "The best hour of the day is the first one. I pin yesterday’s proofs to the wall opposite the window and look at them before doing anything else. In low light, at a distance, the problems show themselves: a letter that is too dark, a curve that turns too late. I mark them with a pencil and fix them while the light lasts.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ff98f023c3e8",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "22529d39918a",
+      "text": "Summer is for making, winter is for deciding",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "48c13465f7b1",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "56a7bfe2d0cc",
+      "text": "Over time the pattern spread to the whole year. Summer, with its long days, is when I draw new things. Winter is when I review, cut and finish. A typeface started in June is usually ready in February, not because of a plan, but because that is when I can finally see it clearly.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8c6c57500b57",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "70f40d9c20b2",
+      "text": "What I would tell myself",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "37bf1858dda6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "bb98cb182f8f",
+      "text": "Work with the conditions you have, not the ones you wish for. The light was never the problem. Asking it to be the same every day was.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_id": "post.why-we-stopped-keeping-a-roadmap",
+  "_type": "post",
+  "title": "Why we stopped keeping a roadmap",
+  "slug": {
+   "_type": "slug",
+   "current": "why-we-stopped-keeping-a-roadmap"
+  },
+  "date": "2026-08-05",
+  "excerpt": "A public roadmap made promises we could not keep and hid the decisions we actually made. We replaced it with two short lists.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/why-we-stopped-keeping-a-roadmap.svg"
+   }
+  },
+  "author": {
+   "name": "Abi Okonjo",
+   "role": "Contributor",
+   "bio": "Abi writes software for a small team that makes scheduling tools for clinics. She is interested in how teams decide what to do next, and in leaving things out.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-3.svg"
+    }
+   }
+  },
+  "tags": [
+   "Work"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "413cbf2ffa12",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "f3a8b026dc73",
+      "text": "For two years our product had a public roadmap: three columns, Now, Next and Later, with about forty cards between them. Customers voted on cards. We moved them around every quarter.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c7f2a34e7051",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "cfeadb18aacd",
+      "text": "In January we took it down. Nobody has asked for it back.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "b20b8d9140d8",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ec33e4d0c7ab",
+      "text": "What was wrong with it",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "eef6598beb89",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "1ec271814ddb",
+      "text": "A roadmap is a list of promises with dates attached, even when the dates are only implied by the column. Every time a card moved from Next back to Later, someone who had voted for it was disappointed, and they were right to be.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "ad7cbede2cc5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8847d9cf49e3",
+      "text": "It also hid our real decisions. The roadmap showed what we planned to build. It never showed what we had decided not to build, or why, and that was the information customers needed most.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "4f307068d092",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ea94832fda37",
+      "text": "What replaced it",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "89393087424e",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "e43d31af3e86",
+      "text": "Two short lists, on one page.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "f5f6f180b4b6",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3f6e43397b61",
+      "text": "What we are working on.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "a37452439731",
+      "text": " At most three items. Each one says what problem it solves and who asked for it. No dates. When something ships, it moves to the changelog.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2efbd4683008",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "be7ad8f8a8c2",
+      "text": "What we have decided not to do.",
+      "marks": [
+       "strong"
+      ]
+     },
+     {
+      "_type": "span",
+      "_key": "4f461b9be2f9",
+      "text": " This list is longer, and it is the one people read. Each item has a sentence or two explaining the decision. “We will not build our own video calls: the tools practices already use do this better, and we would rather connect to them.”",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1365618e8b48",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a2e0ce12f65f",
+      "text": "What we learned",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "d17d3d3a6742",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "563090392ed6",
+      "text": "Saying no in public is uncomfortable for about a week. After that it saves time, because the same request stops arriving every month. A few customers left over things on the second list. Many more told us that knowing where we stood made it easier to plan their own work.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "5a7bd055c80d",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "d6cf09301596",
+      "text": "The votes are gone too. We still listen to every request. We just stopped pretending that counting them was the same as deciding.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "_id": "post.sharpening-a-ten-minute-habit",
+  "_type": "post",
+  "title": "Sharpening, a ten-minute habit",
+  "slug": {
+   "_type": "slug",
+   "current": "sharpening-a-ten-minute-habit"
+  },
+  "date": "2026-07-22",
+  "excerpt": "Sharp tools are safer, faster and more pleasant. The trick is not a better stone, it is sharpening a little every day instead of a lot every month.",
+  "image": {
+   "_type": "image",
+   "asset": {
+    "_type": "reference",
+    "_ref": "seed-image:/images/posts/sharpening-a-ten-minute-habit.svg"
+   }
+  },
+  "author": {
+   "name": "Ines Varga",
+   "role": "Editor",
+   "bio": "Ines builds chairs in a shared workshop and edits Low Season from the bench next to it. She writes about repair, tools and the habits that keep a practice going.",
+   "avatar": {
+    "_type": "image",
+    "asset": {
+     "_type": "reference",
+     "_ref": "seed-image:/images/people/person-1.svg"
+    }
+   }
+  },
+  "tags": [
+   "Craft",
+   "Tools"
+  ],
+  "body": [
+   {
+    "_type": "block",
+    "_key": "e337f7a3d129",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "502c69c76351",
+      "text": "Every morning, before anything else in the workshop, I sharpen for ten minutes. Not everything: one or two chisels, a plane iron, sometimes a knife. By the end of a fortnight every edge on the bench has been touched.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7611c52223c8",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "43be903b8632",
+      "text": "I used to do it the other way around, waiting until a tool was properly dull and then spending a whole afternoon on it. That afternoon never came at a convenient time, so I worked with blunt tools for weeks.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "8ebdf4f8a1a9",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b239f0282005",
+      "text": "Why little and often works",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "79217884bcae",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "917ee6cb4082",
+      "text": "A slightly dull edge takes a minute to restore. A badly dull one needs regrinding, which takes much longer and removes a lot more steel. Little and often is faster in total and the tools last years longer.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "7a4e02335962",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "263db5325163",
+      "text": "It also changes how the work feels. With a sharp chisel you stop pushing and start guiding. You make fewer mistakes, and the ones you make are smaller.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "2dfe556aa7a5",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "5aae2efc5ab8",
+      "text": "The kit",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "afdc2217911d",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "45ea968b8d46",
+      "text": "You need much less than the catalogues suggest.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "sectionTable",
+    "_key": "f105c712ca43",
+    "rows": [
+     {
+      "_type": "sectionTableRow",
+      "_key": "8953601bd3d0",
+      "cells": [
+       "Step",
+       "What I use",
+       "Time"
+      ]
+     },
+     {
+      "_type": "sectionTableRow",
+      "_key": "dece9918f8dd",
+      "cells": [
+       "Flatten the back",
+       "1000 grit water stone",
+       "once per tool"
+      ]
+     },
+     {
+      "_type": "sectionTableRow",
+      "_key": "bfe624891294",
+      "cells": [
+       "Hone the bevel",
+       "1000, then 6000 grit",
+       "3 to 5 minutes"
+      ]
+     },
+     {
+      "_type": "sectionTableRow",
+      "_key": "28fbd3f84e15",
+      "cells": [
+       "Strop",
+       "leather with compound",
+       "30 seconds"
+      ]
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1a727bfbe63f",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "b378ad57df10",
+      "text": "A simple honing guide helps when you start. After a few months most people find they can hold the angle by hand.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "3501fc779ad5",
+    "style": "h2",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "3734c9ca2b63",
+      "text": "The routine",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "0563f81e3683",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "ba938220eb97",
+      "text": "Wet the stones while the kettle boils.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "c2c8653c66c8",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "92384955601b",
+      "text": "Pick the tools you used most yesterday.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "751ccda49885",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "a55fe7e16175",
+      "text": "Hone each one until you can feel a small burr along the whole edge.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "1d9468fd1b85",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "8bdb167a4b9e",
+      "text": "Remove the burr on the finer stone and the strop.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "86e5315c3c6b",
+    "style": "normal",
+    "listItem": "number",
+    "level": 1,
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "2b446f306b90",
+      "text": "Test on the end grain of a scrap of pine. A sharp edge leaves it shiny.",
+      "marks": []
+     }
+    ]
+   },
+   {
+    "_type": "block",
+    "_key": "99daccb7edf5",
+    "style": "normal",
+    "markDefs": [],
+    "children": [
+     {
+      "_type": "span",
+      "_key": "c4db0d917cae",
+      "text": "Ten minutes, then coffee, then work. It is the most reliable part of my day.",
+      "marks": []
+     }
+    ]
+   }
+  ]
+ }
+]
